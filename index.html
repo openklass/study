@@ -6,18 +6,31 @@
 	<title>Openklass</title>
 	<style type="text/css"></style>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript">
-		fetch('js_data.json')
-  			.then(response => response.json())
-  			.then(data => {
-    		console.log(data); // Handle the JSON data here
-  		})
-  .catch(error => console.error('Error:', error));
+	<script type="text/javascript" src="js_data.json">
+		
 	</script>
 
 </head>
 <body>
 <p>Hi there</p>
 <span>test 1</span>
+<h1>JSON Data Display</h1>
+  <div id="jsonData"></div>
+
+  <script>
+    // Fetch the JSON data from js_data.json
+    fetch('js_data.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(data); // This will log the JSON data to the console
+        document.getElementById('jsonData').textContent = JSON.stringify(data, null, 2); // Display JSON data on the page
+      })
+      .catch(error => console.error('Error fetching JSON:', error));
+  </script>
 </body>
 </html>
