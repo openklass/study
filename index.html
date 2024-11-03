@@ -4,7 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Openklass</title>
-	<style type="text/css"></style>
+	<style type="text/css">
+		.accordion {
+			width: 30%;
+		}
+	</style>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="js_data.json">
 		
@@ -35,7 +39,7 @@
       .catch(error => console.error('Error fetching JSON:', error));
   </script>
 
-	  <div class="container my-4">
+	<div class="container my-4">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
         <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
@@ -74,8 +78,8 @@
         <p>This is the Computer Science section.</p>
 
 
-<div class="container my-4">
-  <h2>Subject Accordion</h2>
+
+  <h2>Computer Science</h2>
   <div class="accordion" id="subjectAccordion">
     
     <!-- Science Section -->
@@ -222,7 +226,7 @@
 
 
   </div>
-</div>
+
 
 
 	</div>
@@ -236,6 +240,7 @@
         <p>This tab is disabled.</p>
       </div>
     </div>
+
   </div>
 
 
